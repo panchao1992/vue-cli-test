@@ -1,35 +1,32 @@
 <template>
-  <div id="app">
-    
-  </div>
-
+    <fieldset>
+        <legend>father:</legend>
+        name:<input type="text" v-model="name">
+        <son :myname="name" @getTel="getTel"></son>
+        <h3>来自子组件的值</h3>
+        tel:{{tel}}
+    </fieldset>
 </template>
-
 <script>
+import son from './son'
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    data(){
+        return {
+            name:'',
+            tel:''
+        }
+    },
+    components:{
+        son
+    },
+    methods:{
+        getTel(data){
+            this.tel = data
+        }
     }
-  }
+
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
