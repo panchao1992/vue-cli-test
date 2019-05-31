@@ -4,6 +4,7 @@ const menu = ()=> import('@/components/menu')
 const fa = ()=> import('@/components/fa')
 const filter = ()=> import('@/components/filter')
 const ifelse = ()=> import('@/components/if-else')
+const vuex = ()=> import('@/components/vuex')
 Vue.use(Router)
 
 export default new Router({
@@ -27,6 +28,11 @@ export default new Router({
       path: '/if-else',
       name: 'ifelse',
       component: ifelse
+    },
+    {
+      path: '/vuex',
+      name: 'vuex',
+      component: vuex
     },
   ]
 })
