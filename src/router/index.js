@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+const error = ()=> import('@/components/404')
 const menu = ()=> import('@/components/menu')
 const fa = ()=> import('@/components/fa')
 const filter = ()=> import('@/components/filter')
@@ -12,7 +13,13 @@ export default new Router({
     {
       path: '/',
       name: 'menu',
-      component: menu
+      component: menu,
+      alias:'/home'
+    },
+    {
+      path:'*',
+      name:'error',
+      component:error
     },
     {
       path: '/fa',

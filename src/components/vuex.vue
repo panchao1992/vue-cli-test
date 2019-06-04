@@ -1,10 +1,11 @@
 <template>
     <div>
-        <span>来自vuex-store/index/state:{{count}}</span>
+        <div>来自vuex-store/index/state:{{count}}</div>
+        <button @click="modifyCount">修改count</button>
     </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState,mapMutations } from 'vuex'
 export default {
     data(){
         return {
@@ -18,6 +19,12 @@ export default {
         ...mapState([
             'count'
         ])
+    },
+    methods:{
+        ...mapMutations(['addCount']),
+        modifyCount(){
+            this.$store.commit('addCount',100)
+        }
     }
 }
 </script>
