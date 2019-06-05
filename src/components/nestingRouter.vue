@@ -1,8 +1,9 @@
 <template>
     <div class="main">
         <p>此页面包含自己的 < router-view ></p>
-        <router-link to="/hello/zhang"><button>张三</button></router-link>
-        <router-link to="/hello/li"><button>李四</button></router-link>
+        <router-link to="/nestingRouter/view1"><button>view1</button></router-link>
+        <router-link to="/nestingRouter/view2"><button>view2</button></router-link>
+        <router-view></router-view>
     </div>
 </template>
 <script>

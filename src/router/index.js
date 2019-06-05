@@ -9,6 +9,8 @@ const vuex = ()=> import('@/components/vuex')
 const activeRouter = ()=> import('@/components/activeRouter')
 const hello = ()=> import('@/components/hello')
 const nestingRouter = ()=> import('@/components/nestingRouter')
+const nestingRouter1 = ()=> import('@/components/nestingRouter')
+const nestingRouter2 = ()=> import('@/components/nestingRouter')
 Vue.use(Router)
 
 export default new Router({
@@ -61,7 +63,17 @@ export default new Router({
     {
       path: '/nestingRouter',
       name: 'nestingRouter',
-      component: nestingRouter
+      component: nestingRouter,
+      children:[
+        {
+          path: '/nestingRouter/view1',
+          component:nestingRouter1
+        },
+        {
+          path: '/nestingRouter/view2',
+          component:nestingRouter2
+        }
+      ]
     },
   ]
 })
