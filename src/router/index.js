@@ -6,15 +6,22 @@ const fa = ()=> import('@/components/fa')
 const filter = ()=> import('@/components/filter')
 const ifelse = ()=> import('@/components/if-else')
 const vuex = ()=> import('@/components/vuex')
+const activeRouter = ()=> import('@/components/activeRouter')
+const hello = ()=> import('@/components/hello')
+const nestingRouter = ()=> import('@/components/nestingRouter')
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
+      redirect:'/home'
+    },
+    {
+      path: '/home',
       name: 'menu',
       component: menu,
-      alias:'/home'
+      alias:['/menu'] //别名
     },
     {
       path:'*',
@@ -40,6 +47,21 @@ export default new Router({
       path: '/vuex',
       name: 'vuex',
       component: vuex
+    },
+    {
+      path: '/activeRouter',
+      name: 'activeRouter',
+      component: activeRouter
+    },
+    {
+      path: '/hello/:id',
+      name: 'hello',
+      component: hello
+    },
+    {
+      path: '/nestingRouter',
+      name: 'nestingRouter',
+      component: nestingRouter
     },
   ]
 })
