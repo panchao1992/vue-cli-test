@@ -9,15 +9,18 @@ const vuex = ()=> import('@/components/vuex')
 const activeRouter = ()=> import('@/components/activeRouter')
 const hello = ()=> import('@/components/hello')
 const nestingRouter = ()=> import('@/components/nestingRouter')
-const nestingRouter1 = ()=> import('@/components/nestingRouter')
-const nestingRouter2 = ()=> import('@/components/nestingRouter')
+const navRouter = ()=> import('@/components/navRouter')
+const paramsRouter = ()=> import('@/components/paramsRouter')
+const queryRouter = ()=> import('@/components/queryRouter')
+const views = ()=> import('@/components/views')
+const header = ()=> import('@/components/header')
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      redirect:'/home'
+      redirect:'/home' //重定向
     },
     {
       path: '/home',
@@ -64,16 +67,33 @@ export default new Router({
       path: '/nestingRouter',
       name: 'nestingRouter',
       component: nestingRouter,
-      children:[
+      children:[       //嵌套路由
         {
-          path: '/nestingRouter/view1',
-          component:nestingRouter1
-        },
-        {
-          path: '/nestingRouter/view2',
-          component:nestingRouter2
+          path: '/navRouter',
+          component:navRouter,
+          children:[
+            {
+              name:'paramsRouter',
+              path: '/paramsRouter',
+              component:paramsRouter
+            },
+            {
+              path:'/queryRouter',
+              component:queryRouter
+            }
+          ]
         }
       ]
+    },
+    {
+      path: '/views',
+      name: 'views',
+      component:views,
+      components: {
+        header:header,
+        // sidebar:sidebar,
+        // body:body
+      }
     },
   ]
 })

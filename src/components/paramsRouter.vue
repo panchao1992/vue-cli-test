@@ -1,8 +1,6 @@
 <template>
     <div class="main">
-        <p>此页面包含自己的 < router-view ></p>
-        <router-link to="/navRouter"><button>view1</button></router-link>
-        <router-view></router-view>
+        <p>这是name-params传过来的页面，路由不带参数</p>
     </div>
 </template>
 <script>

@@ -1,8 +1,9 @@
 <template>
     <div class="main">
-        <p>此页面包含自己的 < router-view ></p>
-        <router-link to="/navRouter"><button>view1</button></router-link>
-        <router-view></router-view>
+        <h2>11111111</h2>
+        <router-view name="header" class="header"></router-view>
+        <router-view name="sidebar" class="sidebar"></router-view>
+        <router-view name="body" class="body"></router-view>
     </div>
 </template>
 <script>
