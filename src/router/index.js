@@ -14,6 +14,8 @@ const paramsRouter = ()=> import('@/components/paramsRouter')
 const queryRouter = ()=> import('@/components/queryRouter')
 const views = ()=> import('@/components/views')
 const header = ()=> import('@/components/header')
+const sidebar = ()=> import('@/components/sidebar')
+const body = ()=> import('@/components/body')
 Vue.use(Router)
 
 export default new Router({
@@ -59,7 +61,7 @@ export default new Router({
       component: activeRouter
     },
     {
-      path: '/hello/:id',
+      path: '/hello/:id', //动态路由
       name: 'hello',
       component: hello
     },
@@ -89,11 +91,17 @@ export default new Router({
       path: '/views',
       name: 'views',
       component:views,
-      components: {
-        header:header,
-        // sidebar:sidebar,
-        // body:body
-      }
+      children:[
+        {
+          path:'/views/demo',
+          components: {
+            header:header,
+            sidebar:sidebar,
+            body:body
+          }
+        }
+      ]
+      
     },
   ]
 })

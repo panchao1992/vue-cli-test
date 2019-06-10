@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>这里是header</h3>
+        <h3>这里是body</h3>
     </div>
 </template>
 <script>

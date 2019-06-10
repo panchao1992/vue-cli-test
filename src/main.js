@@ -18,3 +18,11 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+//全局前置守卫
+router.beforeEach((to,from,next)=>{
+  console.log('to:',to)
+  console.log('from:',from)
+  console.log(next)
+  next()
+})

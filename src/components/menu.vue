@@ -7,7 +7,7 @@
             <li><router-link to='/vuex'>vuex</router-link></li>
             <li><router-link to='/activeRouter'>动态路由</router-link></li>
             <li><router-link to='/nestingRouter'>嵌套路由</router-link></li>
-            <li><router-link to='/views'>多视图</router-link></li>
+            <li><router-link to='/views/demo'>多视图</router-link></li>
         </ol>
         <router-view></router-view>
     </div>
