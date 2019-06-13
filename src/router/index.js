@@ -71,16 +71,16 @@ export default new Router({
       component: nestingRouter,
       children:[       //嵌套路由
         {
-          path: '/navRouter',
+          path: 'navRouter',
           component:navRouter,
           children:[
             {
               name:'paramsRouter',
-              path: '/paramsRouter',
+              path: 'paramsRouter',
               component:paramsRouter
             },
             {
-              path:'/queryRouter',
+              path:'queryRouter',
               component:queryRouter
             }
           ]
@@ -93,11 +93,17 @@ export default new Router({
       component:views,
       children:[
         {
-          path:'/views/demo',
+          path:'demo',
           components: {
             header:header,
             sidebar:sidebar,
             body:body
+          },
+          meta:{ requiresAuth:true }, //路由元信息
+          beforeEnter:(to,from ,next)=>{ //路由独享的守卫
+            console.log('to:',to)
+            console.log('from:',from)
+            next() //必须的
           }
         }
       ]

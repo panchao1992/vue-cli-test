@@ -43,5 +43,7 @@ export default {
 }
 </script>
 <style scope>
-
+.main{
+    padding: 20px;
+}
 </style>

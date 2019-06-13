@@ -7,7 +7,7 @@
         <router-link :to="{name:'paramsRouter',params:{id:'001'}}"><button>声明式跳转</button></router-link>
         <p>二：path-query</p>
         <button @click="queryTo">编程式跳转</button>
-        <router-link :to="{path:'/queryRouter',query:{id:'001'}}"><button>声明式跳转</button></router-link>
+        <router-link :to="{path:'/nestingRouter/navRouter/queryRouter',query:{id:'001'}}"><button>声明式跳转</button></router-link>
         <router-view></router-view>
         <h3 style="margin-top:20px;">路由替换 router.replace</h3>
         <p>history里面没有记录</p>
@@ -37,10 +37,10 @@ export default {
             this.$router.push({name:'paramsRouter',params:{id:'001'}})
         },
         queryTo(){
-            this.$router.push({path:'/queryRouter',query:{id:'001'}})
+            this.$router.push({path:'/nestingRouter/navRouter/queryRouter',query:{id:'001'}})
         },
         replaceTo(){
-            this.$router.replace('/paramsRouter')
+            this.$router.replace('/nestingRouter/navRouter/paramsRouter')
         },
         goTo(){
             this.$router.go(-1)

@@ -20,9 +20,15 @@ new Vue({
 })
 
 //全局前置守卫
-router.beforeEach((to,from,next)=>{
+// router.beforeEach((to,from,next)=>{
+//   console.log('to:',to)
+//   console.log('from:',from)
+//   console.log(next)
+//   next() //必须的
+// })
+
+//全局后置钩子
+router.afterEach((to, from) => {
   console.log('to:',to)
   console.log('from:',from)
-  console.log(next)
-  next()
 })

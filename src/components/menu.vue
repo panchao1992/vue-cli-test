@@ -9,7 +9,7 @@
             <li><router-link to='/nestingRouter'>嵌套路由</router-link></li>
             <li><router-link to='/views/demo'>多视图</router-link></li>
         </ol>
-        <router-view></router-view>
+        
     </div>
 </template>
 <script>
@@ -26,4 +26,5 @@ ol{
         margin-bottom:8px;
     }
 }
+
 </style>
