@@ -6,8 +6,10 @@ import router from './router'
 import Vuex from 'vuex'
 // 引入Vuex
 import store from './store'
+//import axios from 'axios'
 
 Vue.use(Vuex)
+//Vue.use(axios)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -16,6 +16,7 @@ const views = ()=> import('@/components/views')
 const header = ()=> import('@/components/header')
 const sidebar = ()=> import('@/components/sidebar')
 const body = ()=> import('@/components/body')
+const transition = ()=> import('@/components/transition')
 Vue.use(Router)
 
 export default new Router({
@@ -109,5 +110,10 @@ export default new Router({
       ]
       
     },
+    {
+      path: '/transition',
+      name: 'transition',
+      component:transition
+    }
   ]
 })
