@@ -17,6 +17,7 @@ const header = ()=> import('@/components/header')
 const sidebar = ()=> import('@/components/sidebar')
 const body = ()=> import('@/components/body')
 const transition = ()=> import('@/components/transition')
+const scrollTop = ()=> import('@/components/scrollTop')
 Vue.use(Router)
 
 export default new Router({
@@ -114,6 +115,11 @@ export default new Router({
       path: '/transition',
       name: 'transition',
       component:transition
+    },
+    {
+      path: '/scrollTop',
+      name: 'scrollTop',
+      component:scrollTop
     }
   ]
 })
