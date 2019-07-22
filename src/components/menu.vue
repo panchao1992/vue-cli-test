@@ -10,6 +10,7 @@
             <li><router-link to='/views/demo'>多视图</router-link></li>
             <li><router-link to='/transition'>动画</router-link></li>
             <li><router-link to='/scrollTop'>scrollTop</router-link></li>
+            <li><router-link to='/alimap'>高德地图</router-link></li>
         </ol>
         
     </div>

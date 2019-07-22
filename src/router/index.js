@@ -18,6 +18,7 @@ const sidebar = ()=> import('@/components/sidebar')
 const body = ()=> import('@/components/body')
 const transition = ()=> import('@/components/transition')
 const scrollTop = ()=> import('@/components/scrollTop')
+const alimap = ()=> import('@/components/alimap')
 Vue.use(Router)
 
 export default new Router({
@@ -120,6 +121,11 @@ export default new Router({
       path: '/scrollTop',
       name: 'scrollTop',
       component:scrollTop
+    },
+    {
+      path: '/alimap',
+      name: 'alimap',
+      component:alimap
     }
   ]
 })
