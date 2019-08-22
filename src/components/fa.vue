@@ -23,8 +23,10 @@ export default {
         getTel(data){
             this.tel = data
         }
-    }
-
+    },
+    created(){
+        console.log('the author is:',this.author)
+    },
 }
 </script>
 <style scoped>

@@ -34,3 +34,4 @@ router.afterEach((to, from) => {
   console.log('to:',to)
   console.log('from:',from)
 })
+Vue.prototype.author = 'Panchao' //相当于全局变量
