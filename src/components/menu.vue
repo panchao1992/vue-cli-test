@@ -11,6 +11,7 @@
             <li><router-link to='/transition'>动画</router-link></li>
             <li><router-link to='/scrollTop'>scrollTop</router-link></li>
             <li><router-link to='/alimap'>高德地图</router-link></li>
+            <li><router-link :to='{path:"routeAppend"}' append tag="span">router-link其他属性</router-link></li>
         </ol>
         
     </div>

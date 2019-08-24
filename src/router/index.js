@@ -19,6 +19,7 @@ const body = ()=> import('@/components/body')
 const transition = ()=> import('@/components/transition')
 const scrollTop = ()=> import('@/components/scrollTop')
 const alimap = ()=> import('@/components/alimap')
+const routeAppend = ()=> import('@/components/route-append')
 Vue.use(Router)
 
 export default new Router({
@@ -126,6 +127,11 @@ export default new Router({
       path: '/alimap',
       name: 'alimap',
       component:alimap
+    },
+    {
+      path: '/home/routeAppend',
+      name: 'routeAppend',
+      component:routeAppend
     }
   ]
 })
