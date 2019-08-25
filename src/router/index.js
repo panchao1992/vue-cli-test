@@ -20,6 +20,8 @@ const transition = ()=> import('@/components/transition')
 const scrollTop = ()=> import('@/components/scrollTop')
 const alimap = ()=> import('@/components/alimap')
 const routeAppend = ()=> import('@/components/route-append')
+const css3 = ()=> import('@/components/css3')
+const arrayToObject = ()=> import('@/components/arrayToObject')
 Vue.use(Router)
 
 export default new Router({
@@ -132,6 +134,16 @@ export default new Router({
       path: '/home/routeAppend',
       name: 'routeAppend',
       component:routeAppend
-    }
+    },
+    {
+      path: '/css3',
+      name: 'css3',
+      component:css3
+    },
+    {
+      path: '/arrayToObject',
+      name: 'arrayToObject',
+      component:arrayToObject
+    },
   ]
 })

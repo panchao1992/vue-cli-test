@@ -6,7 +6,7 @@ import router from './router'
 import Vuex from 'vuex'
 // 引入Vuex
 import store from './store'
-//import axios from 'axios'
+import axios from 'axios'
 
 Vue.use(Vuex)
 //Vue.use(axios)
@@ -35,3 +35,4 @@ router.afterEach((to, from) => {
   console.log('from:',from)
 })
 Vue.prototype.author = 'Panchao' //相当于全局变量
+Vue.prototype.$axios = axios
