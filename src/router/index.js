@@ -22,6 +22,8 @@ const alimap = ()=> import('@/components/alimap')
 const routeAppend = ()=> import('@/components/route-append')
 const css3 = ()=> import('@/components/css3')
 const arrayToObject = ()=> import('@/components/arrayToObject')
+const topology = ()=> import('@/components/topology')
+const axios = ()=> import('@/components/axios')
 Vue.use(Router)
 
 export default new Router({
@@ -144,6 +146,16 @@ export default new Router({
       path: '/arrayToObject',
       name: 'arrayToObject',
       component:arrayToObject
+    },
+    {
+      path: '/topology',
+      name: 'topology',
+      component:topology
+    },
+    {
+      path: '/axios',
+      name: 'axios',
+      component:axios
     },
   ]
 })

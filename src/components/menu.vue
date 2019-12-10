@@ -14,6 +14,8 @@
             <li><router-link :to='{path:"routeAppend"}' append tag="span">router-link其他属性</router-link></li>
             <li><router-link to='/css3' >水平垂直居中</router-link></li>
             <li><router-link to='/arrayToObject' >数组转对象</router-link></li>
+            <li><router-link to='/topology' >visjs-network</router-link></li>
+            <li><router-link to='/axios' >axios</router-link></li>
         </ol>
         
     </div>
