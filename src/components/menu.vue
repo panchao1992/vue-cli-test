@@ -23,7 +23,26 @@
 <script>
 export default {
     mounted(){
-        console.log(this.$route)
+        this.testPromise()
+    },
+    methods:{
+        testPromise(){
+            let a = new Promise((resolve,reject)=>{
+                let num = 0
+                setTimeout(function(){
+                    num = 1
+                    console.log(222)
+                    return resolve(num)
+                },2000)
+                console.log(111)
+            }).then((res)=>{
+                console.log(res)
+                console.log(444)
+                return 123
+            }).then(data=>{
+                console.log(data)
+            })
+        }
     }
 }
 </script>

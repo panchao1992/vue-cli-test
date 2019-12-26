@@ -4,6 +4,7 @@
     </div>
 </template>
 <script>
+import { resolve } from 'url'
 export default {
     data(){
         return {
@@ -14,12 +15,7 @@ export default {
         console.log(this.$route)
         this.msg = this.$route.params.id
     },
-    computed:{
-        
-    },
-    methods:{
-        
-    }
+    
 }
 </script>
 <style scoped>
