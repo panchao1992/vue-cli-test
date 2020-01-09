@@ -43,9 +43,35 @@
               shshsh
   		</div>
     </div>
+    <div class="boxsize">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
 </div>
 </template>
 <style scoped>
+.boxsize{
+    width:80%;
+    height:200px;
+    background: lightblue;
+    border:10px solid lightcoral;
+    box-sizing: border-box;/* 包含padding与border */
+    padding: 10px;
+    margin:10px;
+    overflow: auto;
+}
+.boxsize .left{
+    float:left;
+    height:100%;
+    width:200px;
+    background:burlywood;
+}
+.boxsize .right{
+    height:100%;
+    background:coral;
+    overflow: auto;
+}
 .main{
     padding-left: 20px;
 }

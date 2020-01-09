@@ -5,7 +5,7 @@
     </div>
 </template>
 <script>
-import { mapState,mapMutations } from 'vuex'
+import { mapState,mapMutations,mapActions } from 'vuex'
 export default {
     data(){
         return {
@@ -22,8 +22,10 @@ export default {
     },
     methods:{
         ...mapMutations(['addCount']),
+        ...mapActions(['addNowCount']),
         modifyCount(){
-            this.$store.commit('addCount',100)
+            // this.$store.commit('addCount',100)//action与mutation都可以
+            this.$store.dispatch('addNowCount',100)
         }
     }
 }

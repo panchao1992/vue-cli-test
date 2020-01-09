@@ -6,6 +6,7 @@ export default {
         context.commit('mutation', param)
     },
     addNowCount(context, count) {
+        console.log(context)
         context.commit('addCount', count)
     }
 }
