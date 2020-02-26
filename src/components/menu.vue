@@ -16,6 +16,7 @@
             <li><router-link to='/arrayToObject' >数组转对象</router-link></li>
             <li><router-link to='/topology' >visjs-network</router-link></li>
             <li><router-link to='/axios' >axios</router-link></li>
+            <li><router-link to='/$attrs' >$attrs,$listeners</router-link></li>
         </ol>
         
     </div>

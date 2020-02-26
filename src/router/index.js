@@ -157,5 +157,10 @@ export default new Router({
       name: 'axios',
       component:axios
     },
+    {
+      path: '/$attrs',
+      name: '$attrs',
+      component: () => import ('@/components/$attrs'),
+    },
   ]
 })
