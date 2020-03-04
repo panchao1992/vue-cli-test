@@ -4,6 +4,7 @@
         <p>props: {{pChild2}}</p>
         <p>$attrs: {{$attrs}}</p>
         <hr>
+        <slot name="grandson"></slot>
     </div>
 </template>
 <script>
