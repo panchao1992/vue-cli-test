@@ -162,5 +162,10 @@ export default new Router({
       name: '$attrs',
       component: () => import ('@/components/$attrs'),
     },
+    {
+      path: '/lazyload',
+      name: 'lazyload',
+      component: () => import ('@/components/lazyload'),
+    },
   ]
 })
