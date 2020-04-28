@@ -17,6 +17,7 @@
             <li><router-link to='/topology' >visjs-network</router-link></li>
             <li><router-link to='/axios' >axios</router-link></li>
             <li><router-link to='/$attrs' >$attrs,$listeners</router-link></li>
+            <li><router-link to='/image' >二进制流转图片</router-link></li>
         </ol>
         
     </div>
